@@ -1,0 +1,22 @@
+///Working out basic movements 
+
+
+        Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        Vector3 direction = input.normalized;
+        velocity = direction * speed
+    
+    
+/// making an object follow 
+
+        
+        Vector3 displacementFromTarget = targetTransform.position - transform.position;
+        Vector3 directionToTarget = displacementFromTarget.normalzed;
+        Vector3 velocity = directionToTarget *speed;
+       
+        float distanceToTarget = displacementFromTarget.magnitude;                                                                                                                    
+ 
+ /// Rotating an object
+ 
+        transform.Rotate (Vector3.up * Time.deltaTime * 180, Space.World);
+        
+   
